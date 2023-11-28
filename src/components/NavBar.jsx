@@ -6,8 +6,7 @@ function NavBar(){
           <nav>
             <ul>
                 <li><Link to = "/">Home</Link></li>
-                <li><Link to = "./components/AllPlayers.jsx">All Players</Link></li>
-                <li><Link to = "./components/NewPlayerForm.jsx">Add a New Player</Link></li>
+                <li><Link to = "/new">Add a New Player</Link></li>
             </ul>
           </nav>
         </>

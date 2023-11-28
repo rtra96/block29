@@ -1,0 +1,28 @@
+#players-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: cetner;
+    align-items: center;
+}
+
+.player-card {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 1em;
+    padding: 1em;
+    border : 2px solid black;
+}
+
+.player-card img{
+    width: 100%;
+}
+
+#single-player {
+    width: 40%;
+}
+
+#single-player img {
+    width: 100%;
+}
