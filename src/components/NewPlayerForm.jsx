@@ -1,48 +1,55 @@
 import React, { useState } from 'react';
+import { addPlayer } from '../API';
 
-const NewPlayerForm = ({ onNewPlayer }) => {
+
+
+const NewPlayerForm = () => {
   const [name, setName] = useState('');
-  const [age, setAge] = useState('');
+  const [breed, setBreed] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!name || !age) {
+    if (!name || !breed) {
       alert('Please fill the name and age fields');
       return;
     }
 
     const newPlayer = {
       name,
-      age: parseInt(age, 10),
+      breed 
     };
-    onNewPlayer(newPlayer);
+    await addPlayer (newPlayer);
     setName('');
-    setAge('');
+    setBreed('');
   };
-
+ 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Age:
-        <input
-          type="number"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-        />
-      </label>
-      <br />
-      <button type="submit">Add Player</button>
-    </form>
+    
+      <form className='formstylz' onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+        <br />
+        <label>
+          Age:
+          <input
+            type="number"
+            value={breed}
+            onChange={(e) => setBreed(e.target.value)}
+          />
+        </label>
+        <br />
+        <button type="submit">Add Player</button>
+      </form>
+      
+   
   );
+
 };
 
 export default NewPlayerForm;

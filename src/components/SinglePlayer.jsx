@@ -9,15 +9,18 @@ export default function SinglePlayer (){
   useEffect(() => {
     async function getSinglePlayer () {
         try {
-            const nextPlayers = await fetchSinglePlayer(params.playerId);
+            const nextPlayer = await fetchSinglePlayer(params.playerID);
+            setPlayer(nextPlayer);
 
-        } catch (error) {
-            console.error(err);
+        } catch (err) {
+            // console.log(err);
+            console.log('err');
+
         }
     }
         getSinglePlayer();
 }, []);
-  return ( player &&
+  return (player &&
     <div id="single-player">
         <h3>{player.name}</h3>
         <p>ID #{player.id}</p>
@@ -27,4 +30,4 @@ export default function SinglePlayer (){
         <button onClick={() => {navigate("/")}}>Back to All Players</button>
     </div>
   )
-}
+};
