@@ -9,10 +9,13 @@ export default function SinglePlayer (){
   useEffect(() => {
     async function getSinglePlayer () {
         try {
-            const nextPlayers = await fetchSinglePlayer(params.playerId);
+            const nextPlayer = await fetchSinglePlayer(params.playerID);
+            console.log(nextPlayer);
 
-        } catch (error) {
-            console.error(err);
+        } catch (err) {
+            // console.log(err);
+            console.log('err');
+
         }
     }
         getSinglePlayer();

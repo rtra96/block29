@@ -4,7 +4,7 @@ import NavBar from './components/NavBar'
 import NewPlayerForm from './components/NewPlayerForm'
 import SinglePlayer from './components/SinglePlayer'
 import { useState } from 'react';
-import './App.css';
+
 
 
 function App() {
@@ -13,7 +13,7 @@ return (
     <NavBar />
     <Routes>
       <Route path = "/"  element ={<AllPlayers />} />
-      <Route path = "/player/:playerID" element ={<SinglePlayer />} />
+      <Route path = "/players/:playerID" element ={<SinglePlayer />} />
       <Route path = "/new" element = {<NewPlayerForm />} />
     </Routes>
   

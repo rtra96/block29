@@ -26,3 +26,15 @@
 #single-player img {
     width: 100%;
 }
+
+.formstylz {
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    
+}
+
+#root {
+    width: 100%;
+}
