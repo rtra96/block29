@@ -10,7 +10,7 @@ export default function SinglePlayer (){
     async function getSinglePlayer () {
         try {
             const nextPlayer = await fetchSinglePlayer(params.playerID);
-            console.log(nextPlayer);
+            setPlayer(nextPlayer);
 
         } catch (err) {
             // console.log(err);
@@ -20,7 +20,7 @@ export default function SinglePlayer (){
     }
         getSinglePlayer();
 }, []);
-  return ( player &&
+  return (player &&
     <div id="single-player">
         <h3>{player.name}</h3>
         <p>ID #{player.id}</p>
@@ -30,4 +30,4 @@ export default function SinglePlayer (){
         <button onClick={() => {navigate("/")}}>Back to All Players</button>
     </div>
   )
-}
+};

@@ -16,7 +16,7 @@
 }
 
 .player-card img{
-    width: 100%;
+    width: 90%;
 }
 
 #single-player {
@@ -37,4 +37,8 @@
 
 #root {
     width: 100%;
+}
+
+#navigate {
+   text-align: center;
 }
